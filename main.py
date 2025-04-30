@@ -16,6 +16,24 @@ def main():
 
         if opcion==1:
                 print(f"Inicializando quiz para {nombre_Usuario}")
+                print("Bienvenido al curso express de aprendizaje python")
+                print("Selecciona el nivel que deseas aprender")
+                print("1. Nivel Básico de pyhton")
+                print("2. Nivel medio de pyhton")
+                print("3. Nivel experto de pyhton")
+                opcion=int(input("Selecciona una opcion"))
+
+                if opcion==1:
+                       print("Entraste al cuestionario basico de python ¡Preparate!")
+                       print("A continuación te realizaremos una serie de preguntas las cuales determinaran si tu nivel de python es el que indicaste " \
+                       "o si perteneces a un nivel mas avanzado, dichas preguntas te daran un puntaje y poco a poco iran aumentando su dificultad.")
+               
+               
+               
+                elif opcion==2:
+                       print("Entraste al cuestionario medio de python ¡Preparate!")
+                elif opcion==3:
+                       print("Entraste al cuestionario experto de python ¡Preparate!")
                 #Inicializar el Quiz
                 #funciones para gestionar las preguntas
         elif opcion==2:
