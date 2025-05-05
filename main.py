@@ -18,9 +18,6 @@ def ejecutar_quiz_basico():
         print("Por favor, ingresa un número válido.")
 
     print(f"Tu puntaje es {puntaje}")
-
-
-
 def mostrar_menu():
 
     print("Menú Principal")
@@ -29,6 +26,31 @@ def mostrar_menu():
     print("3. Ver historial")
     print("4. Cambiar nombre")
     print("5. Salir")
+def ejecutar_quiz_medio():
+    puntaje=0
+    print("Que ejecuta la siguiente función?")
+    print("def saludo(nombre,mensaje=Hola")
+    print("f""mensaje}, {nombre")
+
+    print("Saludo(Ana)")
+
+    print("1.) Hola Ana")
+    print("2.) mensaje, Ana ")
+    print("3.) Ana, Hola ")
+    print("4.) Error de compilación")
+
+    try:
+        respuesta = int(input("Ingresa la opción correcta (1-4): "))
+        if respuesta == 1:
+            print("¡Respuesta correcta!")
+            puntaje += 1
+        else:
+            print("Respuesta incorrecta.")
+    except ValueError:
+        print("Por favor, ingresa un número válido.")
+
+
+
 
 def main():
     nombre_Usuario=input("Bienvenido Ingrese su nombre de usuario ")
@@ -57,7 +79,12 @@ def main():
                                         "o si perteneces a un nivel mas avanzado, dichas preguntas te daran un puntaje y poco a poco iran aumentando su dificultad.")
                                                 
                                         ejecutar_quiz_basico()
-                        
+                                elif nivel==2:
+                                        print("Entraste al cuestionario medio de python ¡Preparate!")
+                                        print("A continuación te realizaremos una serie de preguntas las cuales determinaran si tu nivel de python es el que indicaste " \
+                                        "o si perteneces a un nivel mas avanzado, dichas preguntas te daran un puntaje y poco a poco iran aumentando su dificultad.")
+                                                
+                                        ejecutar_quiz_medio()
                         
         elif opcion==2:
                                 print("Entraste al cuestionario medio de python ¡Preparate!")
