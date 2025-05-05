@@ -27,6 +27,7 @@ def mostrar_menu():
     print("4. Cambiar nombre")
     print("5. Salir")
 def ejecutar_quiz_medio():
+    
     puntaje=0
     print("Que ejecuta la siguiente función?")
     print("def saludo(nombre,mensaje=Hola")
@@ -48,10 +49,32 @@ def ejecutar_quiz_medio():
             print("Respuesta incorrecta.")
     except ValueError:
         print("Por favor, ingresa un número válido.")
-
-
-
-
+def ejecutar_quiz_experto():
+    puntaje=0
+    print("Que hace el siguiente codigo con decoradores?")
+    print("def decorador(func):")
+    print("print(Antes de ejecutar la función")
+    print("func()")
+    print("print(Depues de ejecutar la función)")
+    print("return envoltura")
+    print("def saludar():")
+    print("print(Hola mundo)")
+    print("saludar()")
+    
+    print("1.) Llama a saludar sin decorarla")
+    print("2.) Ejecuta saludar(), antes de decorador()")
+    print("3.) Imprime mensajes antes y dspués de saludar()")
+    print("4.) Solo imprime Hola mundo")
+    
+    try:
+        respuesta = int(input("Ingresa la opción correcta (1-4): "))
+        if respuesta == 3:
+            print("¡Respuesta correcta!")
+            puntaje += 1
+        else:
+            print("Respuesta incorrecta.")
+    except ValueError:
+        print("Por favor, ingresa un número válido.")
 def main():
     nombre_Usuario=input("Bienvenido Ingrese su nombre de usuario ")
 
@@ -85,17 +108,17 @@ def main():
                                         "o si perteneces a un nivel mas avanzado, dichas preguntas te daran un puntaje y poco a poco iran aumentando su dificultad.")
                                                 
                                         ejecutar_quiz_medio()
-                        
-        elif opcion==2:
-                                print("Entraste al cuestionario medio de python ¡Preparate!")
-        elif opcion==3:
-                                print("Entraste al cuestionario experto de python ¡Preparate!")
-                                #Inicializar el Quiz
-                                #funciones para gestionar las preguntas
+
+                                elif nivel==3:
+                                        print("Entraste al cuestionario experto de python ¡Preparate!")
+                                        print("A continuación te realizaremos una serie de preguntas las cuales determinaran si tu nivel de python es el que indicaste " \
+                                        "o si perteneces a un nivel mas avanzado, dichas preguntas te daran un puntaje y poco a poco iran aumentando su dificultad.")
+
+                                        ejecutar_quiz_experto()
         elif opcion==2:
                                 print(f"Mostrando estadisticas de jugador {nombre_Usuario}")
                                 #Mostrar estadisticas en pantalla
-                                #
+                                
         elif opcion==3:
                                 print(f"Mostrando estadisticas del jugador {nombre_Usuario}")
                                 #Mostrar historial del jugador
