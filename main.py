@@ -1,3 +1,26 @@
+def ejecutar_quiz_basico():
+    puntaje = 0
+
+    print("¿Cuál de los siguientes es una variable válida en Python?")
+    print("1.) 2usuario")
+    print("2.) usuario_principal")
+    print("3.) usuario-principal")
+    print("4.) usuario principal")
+
+    try:
+        respuesta = int(input("Ingresa la opción correcta (1-4): "))
+        if respuesta == 2:
+            print("¡Respuesta correcta!")
+            puntaje += 1
+        else:
+            print("Respuesta incorrecta.")
+    except ValueError:
+        print("Por favor, ingresa un número válido.")
+
+    print(f"Tu puntaje es {puntaje}")
+
+
+
 def mostrar_menu():
 
     print("Menú Principal")
