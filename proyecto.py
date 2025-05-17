@@ -1,4 +1,0 @@
-print("BIENVENIDO A PYAPREND")
-
-
-
