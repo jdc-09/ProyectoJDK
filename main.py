@@ -4,6 +4,8 @@ from funciones_quiz import ejecutar_quiz_basico, ejecutar_quiz_medio, ejecutar_q
 def main():
 
     nombre_Usuario = input("Bienvenido, ingrese su nombre de usuario: ")
+    puntajes = []
+    num_quizzes = 0
 
     while True:
         mostrar_menu()
@@ -31,23 +33,38 @@ def main():
                 print("A continuación te realizaremos una serie de preguntas las cuales determinarán si tu nivel de Python es el que indicaste " \
                       "o si perteneces a un nivel más avanzado. Dichas preguntas te darán un puntaje y poco a poco irán aumentando su dificultad.")
                 ejecutar_quiz_basico()
+                puntaje = ejecutar_quiz_basico()
+                puntajes.append(puntaje)
+                num_quizzes+= 1
 
             elif nivel == 2:
                 print("Entraste al cuestionario medio de Python ¡Prepárate!")
                 print("A continuación te realizaremos una serie de preguntas las cuales determinarán si tu nivel de Python es el que indicaste " \
                       "o si perteneces a un nivel más avanzado. Dichas preguntas te darán un puntaje y poco a poco irán aumentando su dificultad.")
                 ejecutar_quiz_medio()
+                puntaje = ejecutar_quiz_medio()
+                puntajes.append(puntaje)
+                num_quizzes+= 1
 
             elif nivel == 3:
                 print("Entraste al cuestionario experto de Python ¡Prepárate!")
                 print("A continuación te realizaremos una serie de preguntas las cuales determinarán si tu nivel de Python es el que indicaste " \
                       "o si perteneces a un nivel más avanzado. Dichas preguntas te darán un puntaje y poco a poco irán aumentando su dificultad.")
                 ejecutar_quiz_experto()
+                puntaje = ejecutar_quiz_experto()
+                puntajes.append(puntaje)
+                num_quizzes+= 1
             else:
                 print("Nivel no válido.")
         
         elif opcion == 2:
             print(f"Mostrando estadísticas de jugador {nombre_Usuario}")
+            if num_quizzes >0:
+                puntaje_promedio = sum(puntajes) / num_quizzes  # Se calcula el puntaje promedio
+                print(f"Número de quizzes completados: {num_quizzes}")
+                print(f"Puntaje promedio: {puntaje_promedio}")
+            else:
+                print("Aún no has completado ningún quiz")
             # Aquí puedes poner la función que muestre estadísticas si la agregas
 
         elif opcion == 3:
