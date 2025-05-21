@@ -4,4 +4,7 @@ def mostrar_menu():
     print("2. Ver estadísticas")
     print("3. Ver historial")
     print("4. Cambiar nombre")
-    print("5. Salir")
+    print("5. Practica personalizada")
+    print("6. Repetir preguntas incorrectas")
+    print("7. Guardar y salir")  
+    print("8. Borrar Datos")      
