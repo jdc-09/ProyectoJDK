@@ -56,7 +56,7 @@ def ejecutar_quiz_basico(num_preguntas=None, preguntas_incorrectas=None):
         tiempo_transcurrido_fin_respuesta = time.time() - tiempo_inicio
         if tiempo_transcurrido_fin_respuesta >= tiempo_limite:
             print("¡Se acabó el tiempo!")
-            break  # Salir del bucle de preguntas inmediatamente después de (intentar) obtener la respuesta
+            break  # Salir del bucle de preguntas inmediatamente después de que se intente obtener la respuesta
 
         if respuesta_usuario == pregunta['respuesta_correcta']:
             print("¡Respuesta correcta!")
@@ -118,7 +118,7 @@ def ejecutar_quiz_medio(num_preguntas=None, preguntas_incorrectas=None):
         tiempo_transcurrido_fin_respuesta = time.time() - tiempo_inicio
         if tiempo_transcurrido_fin_respuesta >= tiempo_limite:
             print("¡Se acabó el tiempo!")
-            break  # Salir del bucle de preguntas inmediatamente después de (intentar) obtener la respuesta
+            break  # Salir del bucle de preguntas inmediatamente después de que se intente obtener la respuesta
 
         if respuesta_usuario == pregunta['respuesta_correcta']:
             print("¡Respuesta correcta!")
@@ -186,7 +186,7 @@ def ejecutar_quiz_experto(num_preguntas=None, preguntas_incorrectas=None):
         tiempo_transcurrido_fin_respuesta = time.time() - tiempo_inicio
         if tiempo_transcurrido_fin_respuesta >= tiempo_limite:
             print("¡Se acabó el tiempo!")
-            break  # Salir del bucle de preguntas inmediatamente después de (intentar) obtener la respuesta
+            break  # Salir del bucle de preguntas inmediatamente después de que se intente obtener la respuesta
 
         if respuesta_usuario == pregunta['respuesta_correcta']:
             print("¡Respuesta correcta!")
