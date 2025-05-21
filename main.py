@@ -105,7 +105,7 @@ def main():
 
                 total_preguntas_basico = len([
                     {"pregunta": "¿Cuál de los siguientes es una variable válida en Python?", "opciones": ["1.) 2usuario", "2.) usuario_principal", "3.) usuario-principal", "4.) usuario principal"], "respuesta_correcta": 2, "explicacion": "Una variable en Python debe comenzar con una letra o un guión bajo."}
-                    # ... (Añade aquí todas las preguntas del nivel básico que tienes en funciones_quiz.py)
+                    
                 ])
                 historial_quizzes = np.append(historial_quizzes,
                                              [[nombre_Usuario, datetime.datetime.now(), "Básico", puntaje, total_preguntas_basico]],
@@ -126,7 +126,7 @@ def main():
                                 "def saludo(nombre, mensaje='Hola'):\n"
                                 "    print(f'{mensaje}, {nombre}')\n\n"
                                 "Ejemplo: saludo('Ana')", "opciones": ["1.) Hola Ana", "2.) mensaje, Ana", "3.) Ana, Hola", "4.) Error de compilación"], "respuesta_correcta": 1, "explicacion": "La función utiliza un argumento por defecto para 'mensaje', así que imprimirá 'Hola, Ana'."}
-                    # ... (Añade aquí todas las preguntas del nivel medio)
+                    
                 ])
                 historial_quizzes = np.append(historial_quizzes,
                                              [[nombre_Usuario, datetime.datetime.now(), "Medio", puntaje, total_preguntas_medio]],
@@ -154,7 +154,7 @@ def main():
                                 "def saludar():\n"
                                 "    print('Hola mundo')\n\n"
                                 "saludar()", "opciones": ["1.) Llama a saludar sin decorarla", "2.) Ejecuta saludar() antes de decorador()", "3.) Imprime mensajes antes y después de saludar()", "4.) Solo imprime Hola mundo"], "respuesta_correcta": 3, "explicacion": "El decorador 'decorador' modifica el comportamiento de 'saludar' para imprimir mensajes antes y después de su ejecución."}
-                    # ... (Añade aquí todas las preguntas del nivel experto)
+                    
                 ])
                 historial_quizzes = np.append(historial_quizzes,
                                              [[nombre_Usuario, datetime.datetime.now(), "Experto", puntaje, total_preguntas_experto]],
@@ -173,11 +173,11 @@ def main():
                 print(f"Puntaje promedio: {puntaje_total}")
             else:
                 print("Aún no has completado ningún quiz")
-            # Aquí puedes poner la función que muestre estadísticas si la agregas
+            
 
         elif opcion == 3:
             print(f"Mostrando historial del jugador {nombre_Usuario}")
-            # Aquí puedes poner la función que muestre historial si la agregas
+            
             if historial_quizzes.shape[0] > 1:  # Verificar si hay más de la fila de encabezado
                 for registro in historial_quizzes[1:]:  # Iterar desde la segunda fila
                     print(f"Nivel: {registro[2]}, Puntaje: {registro[3]}/{registro[4]}, Fecha: {registro[1]}")
@@ -231,7 +231,7 @@ def main():
             confirmacion = input().lower()
             if confirmacion == "si":
                 borrar_datos("datos_usuario.json")
-                # Opcional: Reiniciar las variables en memoria
+                
                 nombre_Usuario = ""
                 puntajes = []
                 num_quizzes = 0
